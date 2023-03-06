@@ -40,7 +40,7 @@ func flip_path():
 	var point_in = []
 	var point_out = []
 
-	var curve_points = $Path2D.curve.point_count
+	var curve_points = $Path2D.curve.get_point_count()
 
 	for idx in range(0, curve_points):
 		point_pos.append($Path2D.curve.get_point_position(idx))
