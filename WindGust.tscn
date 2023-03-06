@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://WindGust.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0.00943396, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.5, 0.990909 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 161, 294, -145.146, 0, 145.146, 0, 409, 161, -149.384, -3.17839, 149.384, 3.17839, 665, 399, 0, 0, 0, 0, 876, 266 )
+}
+
+[node name="WindGust" type="Line2D"]
+width_curve = SubResource( 2 )
+script = ExtResource( 1 )
+line_segments = 80
+trail_length = 0.5
+trail_speed = 0.01
+trail_color_gradient = SubResource( 3 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
