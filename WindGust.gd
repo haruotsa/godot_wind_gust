@@ -64,6 +64,9 @@ func move_path():
 		if pf.trail_offset >= 1.0:
 			pf.progress_ratio = 1.0
 
+	if pf_dict[0].progress_ratio == 1.0:
+		queue_free()
+
 func update_path_gradient():
 		
 		for pcnt in range(line_segments+1):
