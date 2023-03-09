@@ -63,6 +63,9 @@ func move_path():
 		
 		if pf.trail_offset >= 1.0:
 			pf.unit_offset = 1.0
+	
+	if pf_dict[0].unit_offset == 1.0:
+		queue_free()
 
 func update_path_gradient():
 		
